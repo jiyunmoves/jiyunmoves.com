@@ -1,4 +1,14 @@
 Jiyunmoves::Application.routes.draw do
+  root "jiyunmoves#home"
+  post "user/login"
+  get "user/logout"
+  get "blog/blog"
+  get "/:category"=>'blog#blog_category'
+  get "blog/blog_each/:id"=>'blog#blog_each'
+  get "blog/blog_edit/:id"=>'blog#blog_edit'
+  post "blog/blog_edit_complete"
+  get "blog/blog_write"
+  post "blog/blog_write_complete"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

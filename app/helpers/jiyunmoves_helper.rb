@@ -1,0 +1,2 @@
+module JiyunmovesHelper
+end

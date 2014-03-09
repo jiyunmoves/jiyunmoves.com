@@ -1,0 +1,14 @@
+<% @blogs.reverse.each do |post| %>
+  <div class="panel">
+    <div class="row panel-body">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+        <img src="<%= post.image_url(:thumb) %>">
+      </div>
+      <div class="col-md-6">
+        <h4><a href="/blog/blog_each/<%= post.id %>"><%= post.title %> <%= post.date %></a></h4>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4 text-center">
+      <form action="/blog/blog_write_complete" method="post" enctype="multipart/form-data">
+        <p>+ Category
+        <select name="category">
+          <option value="diary">Diary</option>
+          <option value="artsdesign">Arts&design</option>
+          <option value="it">IT</option>
+          <option value="entrepreneurship">Entrepreneurship</option>
+        </select></p>
+        <p><input type="file" name="image"></p>
+        <p><input type="text" name="title"></p>
+        <p><textarea name="content"></textarea></p>
+        <input class="btn btn-sm btn-block" type="submit" value="submit">
+      </form>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4 text-center">
+      <form action="/blog/blog_edit_complete" method="post">
+        <input type="hidden" name="id" value="<%= @blog.id %>">
+        <p>+ Category
+        <select name="category">
+          <option value="diary">Diary</option>
+          <option value="artsdesign">Arts&design</option>
+          <option value="it">IT</option>
+          <option value="entrepreneurship">Entrepreneurship</option>
+        </select></p>
+        <p><input type="file" name="image" value="<%= @blog.image %>"></p>
+        <p><input type="text" name="title" value="<%= @blog.title %>"></p>
+        <p><textarea name="content"><%= @blog.content %></textarea></p>
+        <input class="btn btn-sm btn-block" type="submit" value="submit">
+      </form>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>

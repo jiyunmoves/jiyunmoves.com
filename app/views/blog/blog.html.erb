@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Recent posts</h3>
+      <% if !session[:user_id].nil? %>
+        <a href="/blog/blog_write">WRITE</a>
+      <% end %>
+    </div>
+  </div>
+  
+  <%= render :partial=>"blog/post" %>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8 text-right">
+      <h3 class="label label-primary"><%= @blog.title %></h3>
+      <img class="img-rounded" src="<%= @blog.image_url(:medium) %>">
+      <p><span class="label label-info"><%= @blog.category %></span></p>
+      <% if !session[:user_id].nil? %>
+        <p><a href="/blog/blog_edit/<%= @blog.id %>">EDIT</a> | <a href="/post/blog_delete/<%= @blog.id %>">DELETE</a></p>
+      <% end %>
+      <p><%= @blog.content %></p>
+      <a href="/<%= @blog.category %>"><button type="button" class="btn btn-sm">Back to lists</button></a>
+
+    </div>
+  </div>
+</div>

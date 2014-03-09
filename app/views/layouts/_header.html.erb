@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <a href="/"><img class="logo-left" src="https://s3.amazonaws.com/jiyunmoves.com/images_2014/jiyunmoves_9cm.jpg" width="20%"></a>
+  <% if session[:user_id].nil? %>
+    <form action="/user/login" method="post">
+      <input type="hidden" name="username" value="jiyunmoves">
+      <input class="form-input" type="password" name="password"  placeholder="password">
+      <input class="btn btn-sm" type="submit" value="log-in">
+    </form>
+  <% else %>
+    <a href="/user/logout"><button type="button" class="btn btn-default">Log-out</button>
+  <% end %>
+</div>
+
+<nav class="navbar navbar-default" role="navigation">
+<div class="container-fluid">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="/">Home</a>
+  </div>
+
+  <div class="collapse navbar-collapse" id=navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href="/about">About</a></li>
+      <li class="dropdown"><a href="/shop" class="dropdown-toggle" data-toggle="dropdown">Shop<b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a href="/shop/#">category 1</a></li>
+        <li><a href="/shop/#">category 2</a></li>
+      </ul></li>
+      <li><a href="/gallery">Gallery</a></li>
+      <li class="dropdown"><a href="/blog" class="dropdown-toggle" data-toggle="dropdown">Blog<b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a href="/diary">Diary</a></li>
+        <li><a href="/artsdesign">Arts&design</a></li>
+        <li><a href="/it">IT</a></li>
+        <li><a href="/entrepreneurship">Entrepreneurship</a></li>
+      </ul>
+      <li><a href="/project">Project></a></li>
+    </ul>
+  </div>
+</div>
+</nav>
