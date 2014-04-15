@@ -1,6 +1,6 @@
 class BlogController < ApplicationController
   before_action :login_check
-  skip_before_action :login_check, :only=>[:blog, :blog_each]
+  skip_before_action :login_check, :only=>[:blog, :blog_category,  :blog_each]
 
   def blog
     @blogs=Blog.all

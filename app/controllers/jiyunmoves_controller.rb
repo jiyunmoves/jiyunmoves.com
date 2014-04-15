@@ -1,4 +1,9 @@
 class JiyunmovesController < ApplicationController
-  def home
+  def index
+    @blogs=Blog.all
+    @galleries=Gallery.all
+  end
+
+  def about
   end
 end

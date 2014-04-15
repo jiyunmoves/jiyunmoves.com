@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h2>Latest works</h2>
+        </div>
+        <div class="panel-body">
+          <% count=0 %>
+          <% @galleries.reverse.each do |gallery| %>
+            <% count=count+1 %>
+            <% if count <= 5 %>
+              <a class="thumbnail" href="#"><img src="<%= gallery.image_url(:thumb) %>"></a>
+              <div class="caption">
+                <h3><%= gallery.title %></h3>
+                <p><%= gallery.desc %></p>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h2>Latest blogs</h2>
+        </div>
+        <div class="panel-body">
+          <% count=0 %>
+          <% @blogs.reverse.each do |post| %>
+            <% count=count+1 %>
+            <% if count <= 5 %>
+              <h3><a href="#"><%= post.title %></a></h3>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
