@@ -3,10 +3,11 @@ class GalleryController < ApplicationController
   skip_before_action :login_check, :only=>[:gallery, :gallery_category]
 
   def gallery
+    @galleries=Gallery.where(intro: 'y')
   end
 
   def gallery_category
-    @galleries=Gallery.where(category: @g_category)
+    @galleries=Gallery.where(category: params[:category])
   end
 
   def gallery_upload
@@ -18,8 +19,9 @@ class GalleryController < ApplicationController
     gallery.image=params[:image]
     gallery.title=params[:title]
     gallery.desc=params[:desc]
+    gallery.intro=params[:intro]
     if gallery.save
-      redirect_to "/gallery/gallery_category/#{blog.category}"
+      redirect_to "/#{gallery.category}"
     else
       redirect_to :back
     end

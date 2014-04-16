@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Recent products</h3>
+      <% if !session[:user_id].nil? %>
+        <a href="/shop/shop_upload">UPLOAD</a>
+      <% else %>
+        <a href="#">SUBSCRIBE</a>
+      <% end %>
+    </div>
+  </div>
+
+  <%= render :partial=>"shop/product" %>
+</div>

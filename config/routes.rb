@@ -1,6 +1,14 @@
 Jiyunmoves::Application.routes.draw do
+  get "shop/shop"
+  get "shop/shop_category"
+  get "shop/product"
+  get "shop/shop_upload"
+  post "shop/shop_upload_complete"
+  get "shop/shop_edit"
+  get "shop/subcribe"
+  get "shop/buy"
   get "gallery/gallery"
-  get "gallery/:category"=>'gallery#gallery_category'
+  get "gallery/category/:category"=>'gallery#gallery_category'
   get "gallery/gallery_upload"
   post "gallery/gallery_upload_complete"
   get "gallery/gallery_edit"
@@ -9,7 +17,7 @@ Jiyunmoves::Application.routes.draw do
   post "user/login"
   get "user/logout"
   get "blog/blog"
-  get "blog/:category"=>'blog#blog_category'
+  get "/:category"=>'blog#blog_category'
   get "blog/blog_each/:id"=>'blog#blog_each'
   get "blog/blog_edit/:id"=>'blog#blog_edit'
   post "blog/blog_edit_complete"
