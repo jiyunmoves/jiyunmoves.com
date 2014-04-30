@@ -1,3 +1,36 @@
 // Place all the styles related to the gallery controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* image menu-bar */
+.js #gallery {height:100%; min-height:400px;}
+#gallery .image-selector ul {float:left; padding-bottom:20px;}
+#gallery .collection {width:530px; overflow:hidden; float:left; margin:0 17px; position:relative;}
+#gallery .collection ul {position:relative;}
+#gallery .collection ul li {float:left; margin-bottom:0;}
+#gallery .collection ul li img {margin:0;}
+#gallery .collection ul li.selected a {cursor:default;}
+
+
+#gallery .nav-btn {background-image:url(carousel-buttons.gif); cursor:pointer; width:11px; height:10px; float:left; margin:32px 0;}
+#gallery .nav-btn.disabled {cursor:default;}
+#gallery .nav-btn.back {background-position:0 -78px;}
+#gallery .nav-btn.back:hover {background-position:0 -25px;}
+#gallery .nav-btn.back.disabled {background-position:0 -130px;}
+#gallery .nav-btn.prev {background-position:-12px -78px;}
+#gallery .nav-btn.prev:hover {background-position:-12px -25px;}
+#gallery .nav-btn.prev.disabled {background-position:-12px -130px;}
+#gallery .nav-btn.next {background-position:0 -53px;}
+#gallery .nav-btn.next:hover {background-position:0 0;}
+#gallery .nav-btn.next.disabled {background-position:0 -105px;}
+#gallery .nav-btn.forward {background-position:-12px -53px;}
+#gallery .nav-btn.forward:hover {background-position:-12px 0;}
+#gallery .nav-btn.forward.disabled {background-position:-12px -105px;}
+
+#gallery .main-image {text-align:center; margin:0; padding:0; border:none;}
+#gallery .main-image img {cursor:pointer;}
+#gallery .main-image #gnl_form {float:left; width:335px;}
+#gallery .main-image #gnl_thumbs {float:left; width:250px; padding-left:25px;}
+#gallery .main-image #gnl_thumbs h3.title {float:left;}
+#gallery .main-image #gnl-thumbs ul {float:left; width:100%;}
+#gallery .main-image p.close {cursor:pointer;}
