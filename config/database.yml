@@ -19,9 +19,11 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgresql
-  host: 54.84.132.62
-  database: db
-  encoding: unicode
-  username: ec2-user
-  password: ''
+  adapter: sqlite3 
+#  host: 54.84.132.62
+  database: db/production.sqlite3
+#  encoding: unicode
+#  username: ec2-user
+#  password: ''
+  pool: 5
+  timeout: 5000
