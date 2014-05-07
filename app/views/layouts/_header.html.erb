@@ -1,10 +1,12 @@
+<div class="row">
+</div>
 <div class="container-fluid">
-  <a href="/"><img class="logo-left" src="https://s3.amazonaws.com/jiyunmoves.com/images_2014/jiyunmoves_9cm.jpg" width="20%"></a>
+  <a href="/"><img class="logo-left" src="https://s3.amazonaws.com/jiyunmoves.com/images_2014/jiyunmoves_9cm.jpg" width=""></a>
   <% if session[:user_id].nil? %>
-    <form action="/user/login" method="post">
+    <form class="admin_login" action="/user/login" method="post">
       <input type="hidden" name="username" value="jiyunmoves">
       <input class="form-input" type="password" name="password"  placeholder="password">
-      <input class="btn btn-sm" type="submit" value="log-in">
+      <input class="btn btn-sm" type="submit" value="admin login">
     </form>
   <% else %>
     <a href="/user/logout"><button type="button" class="btn btn-default">Log-out</button>
